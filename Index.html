@@ -1,79 +1,86 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Markmap</title>
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-#mindmap {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-}
-body {
-  background-color: yellow;
-}
-</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.3-alpha.1/dist/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PoC de Arquitetura e Projetos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #005f73;
+            color: white;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            padding: 10px 20px;
+            background-color: #0a9396;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #005f73;
+        }
+        section {
+            margin-top: 40px;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-<svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.3-alpha.1/dist/browser/index.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.3-alpha.1/dist/index.js"></script>
-<script>
-(() => {
-  setTimeout(() => {
-    const { markmap: q, mm: v } = window;
-    const j = new q.Toolbar();
-    j.attach(v);
-    const we = j.render();
-    we.setAttribute("style", "position:absolute;bottom:20px;right:20px");
-    document.body.append(we);
-  });
-})();
-</script>
-<script>
-((f, d, h, u) => {
-  const g = f();
-  window.mm = g.Markmap.create("svg#mindmap", (d || g.deriveOptions)(u), h);
-})(() => window.markmap, null, {
-  content: "Tópicos das Certificações AZ-900, AI-900, DP-900, AZ-104, AZ-400 e AZ-305",
-  children: [{
-    content: "1. AZ-900: Microsoft Azure Fundamentals",
-    children: [{
-      content: "<strong>Tópicos Principais:</strong>",
-      children: [{
-        content: "\n<p data-lines=\"6,7\"><strong>Conceitos de Nuvem:</strong></p>",
-        children: [{
-          content: "Benefícios e considerações de utilizar a nuvem",
-          payload: {
-            lines: "7,8"
-          }
-        }, {
-          content: "Modelos de nuvem (IaaS, PaaS, SaaS)",
-          payload: {
-            lines: "8,9"
-          }
-        }, {
-          content: "Modelos de implementação (nuvem pública, privada, híbrida)",
-          payload: {
-            lines: "9,11"
-          }
-        }],
-        payload: {
-          lines: "6,11"
-        }
-      }]
-    }]
-  }]
-}, null);
-</script>
+    <header>
+        <h1>PoC de Arquitetura e Projetos</h1>
+    </header>
+    
+    <nav>
+        <a href="ArquiteturaFiap.html">Arquitetura FIAP</a>
+        <a href="AWS.html">Certificações AWS</a>
+        <a href="Azure.html">Certificações Azure</a>
+        <a href="Oracle.html">Certificações Oracle</a>
+    </nav>
+    
+    <section>
+        <h2>Bem-vindo ao meu Portal de Estudos e Projetos</h2>
+        <p>Explore os mind maps e materiais dos meus estudos e certificações em Arquitetura de Software, AWS, Azure, e Oracle.</p>
+    </section>
+    
+    <footer>
+        <p>Rodrigo Sena de Oliveira &copy; 2024 - Todos os direitos reservados</p>
+    </footer>
 </body>
 </html>
