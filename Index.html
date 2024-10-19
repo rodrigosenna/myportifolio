@@ -1,158 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<!-- Declaração do tipo de documento como HTML5 e definição da linguagem da página como Português do Brasil -->
 <head>
-    <!-- Definição do conjunto de caracteres usado (UTF-8) para suportar a maioria dos caracteres e símbolos -->
     <meta charset="UTF-8">
-    <!-- Tornar o site responsivo ajustando para diferentes tamanhos de tela -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Força a compatibilidade com as versões mais recentes do IE -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Título da página que aparece na aba do navegador -->
     <title>PoC de Arquitetura e Projetos</title>
-    
-    <!-- Importação da fonte Roboto do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <!-- Estilos da página (CSS interno) -->
     <style>
-        /* Reset básico de margens e paddings para todos os elementos */
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* Garante que o padding não afete o tamanho total dos elementos */
+            box-sizing: border-box;
         }
-
-        /* Estilo geral para o corpo da página */
         body {
-            font-family: 'Roboto', sans-serif; /* Define a fonte como Roboto */
-            background-color: #f4f4f4; /* Cor de fundo suave */
-            color: #333; /* Cor do texto */
-            padding: 20px; /* Espaçamento interno das laterais da página */
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
         }
-
-        /* Estilo do cabeçalho da página */
         header {
-            text-align: center; /* Centraliza o conteúdo */
-            padding: 20px 0; /* Adiciona espaçamento vertical */
-            background-color: #005f73; /* Cor de fundo do cabeçalho */
-            color: white; /* Cor do texto no cabeçalho */
-            margin-bottom: 20px; /* Espaçamento abaixo do cabeçalho */
+            text-align: center;
+            padding: 20px 0;
+            background-color: #005f73;
+            color: white;
+            margin-bottom: 20px;
         }
-
-        /* Estilo do título principal no cabeçalho */
         header h1 {
-            font-size: 2.5em; /* Tamanho grande para o título */
-            margin: 0; /* Remove margem extra */
+            font-size: 2.5em;
+            margin: 0;
         }
-
-        /* Estilos para o menu de navegação */
         nav {
-            display: flex; /* Usa Flexbox para facilitar o alinhamento dos itens */
-            justify-content: center; /* Centraliza os itens horizontalmente */
-            gap: 20px; /* Espaçamento entre os links do menu */
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
-
-        /* Estilo dos links de navegação */
         nav a {
-            padding: 10px 20px; /* Espaçamento interno dos links */
-            background-color: #0a9396; /* Cor de fundo dos links */
-            color: white; /* Cor do texto dos links */
-            text-decoration: none; /* Remove o sublinhado dos links */
-            font-weight: 700; /* Define o texto dos links como negrito */
-            border-radius: 5px; /* Adiciona cantos arredondados */
-            transition: background-color 0.3s ease; /* Transição suave para a mudança de cor no hover */
+            padding: 10px 20px;
+            background-color: #0a9396;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
-
-        /* Efeito de hover para mudar a cor de fundo dos links */
         nav a:hover {
-            background-color: #005f73; /* Cor de fundo quando o link é focado ou quando o mouse passa por cima */
+            background-color: #005f73;
         }
-
-        /* Estilo da seção principal de conteúdo */
         section {
-            margin-top: 40px; /* Adiciona espaçamento superior para a seção */
-            text-align: center; /* Centraliza o conteúdo da seção */
+            margin-top: 40px;
+            text-align: center;
         }
-
-        /* Estilo do subtítulo da seção principal */
         section h2 {
-            font-size: 2em; /* Define o tamanho do subtítulo */
-            margin-bottom: 20px; /* Espaçamento abaixo do subtítulo */
+            font-size: 2em;
+            margin-bottom: 20px;
         }
-
-        /* Estilo da seção de contato */
+        .certifications {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .certifications img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .certifications img:hover {
+            transform: scale(1.05);
+        }
         .contact {
-            margin-top: 40px; /* Espaçamento superior para a seção de contato */
-            text-align: center; /* Centraliza o conteúdo */
+            margin-top: 40px;
+            text-align: center;
         }
-
-        /* Estilo dos links de contato (LinkedIn e E-mail) */
         .contact a {
-            display: inline-block; /* Exibe os links como blocos inline */
-            margin: 0 10px; /* Espaçamento entre os links */
-            padding: 10px 20px; /* Espaçamento interno dos links */
-            background-color: #3a86ff; /* Cor de fundo dos links */
-            color: white; /* Cor do texto */
-            text-decoration: none; /* Remove o sublinhado dos links */
-            font-weight: 700; /* Define o texto como negrito */
-            border-radius: 5px; /* Cantos arredondados */
-            transition: background-color 0.3s ease; /* Transição suave para a mudança de cor no hover */
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #3a86ff;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
-
-        /* Efeito de hover para os links de contato */
         .contact a:hover {
-            background-color: #005f73; /* Cor de fundo no hover */
+            background-color: #005f73;
         }
-
-        /* Estilo do rodapé da página */
         footer {
-            margin-top: 40px; /* Adiciona espaçamento acima do rodapé */
-            text-align: center; /* Centraliza o texto */
-            font-size: 0.9em; /* Tamanho menor do texto do rodapé */
-            color: #555; /* Cor mais suave para o texto */
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
         }
     </style>
 </head>
-
 <body>
-    <!-- Cabeçalho principal da página -->
     <header>
-        <!-- Título da página exibido no cabeçalho -->
         <h1>PoC de Arquitetura e Projetos</h1>
     </header>
     
-    <!-- Menu de navegação com links para diferentes páginas -->
     <nav>
-        <!-- Cada link leva a um arquivo HTML diferente referente aos estudos -->
         <a href="ArquiteturaFiap.html">Arquitetura FIAP</a>
         <a href="AWS.html">Certificações AWS</a>
         <a href="Azure.html">Certificações Azure</a>
         <a href="Oracle.html">Certificações Oracle</a>
     </nav>
     
-    <!-- Seção principal de boas-vindas -->
     <section>
-        <h2>Bem-vindo ao meu Portal de Estudos e Projetos</h2>
-        <!-- Texto de introdução ao portal -->
-        <p>Explore os mind maps e materiais dos meus estudos e certificações em Arquitetura de Software, AWS, Azure, e Oracle.</p>
+        <h2>Certificações Conquistadas</h2>
+        <div class="certifications">
+            <!-- Certificações AWS -->
+            <img src="aws-certified-cloud-practitioner.png" alt="AWS Certified Cloud Practitioner">
+            <img src="aws-certified-solutions-architect-associate.png" alt="AWS Certified Solutions Architect – Associate">
+
+            <!-- Certificações Microsoft Azure -->
+            <img src="microsoft-certified-azure-ai-fundamentals.png" alt="Microsoft Certified Azure AI Fundamentals">
+            <img src="microsoft-certified-azure-data-fundamentals.png" alt="Microsoft Certified Azure Data Fundamentals">
+            <img src="microsoft-certified-azure-fundamentals.png" alt="Microsoft Certified Azure Fundamentals">
+            
+            <!-- Certificações Scrum.org -->
+            <img src="professional-scrum-developer-i-psd-i.png" alt="Professional Scrum Developer I">
+            <img src="professional-scrum-master-i-psm-i.png" alt="Professional Scrum Master I">
+            <img src="professional-scrum-master-ii-psm-ii.png" alt="Professional Scrum Master II">
+            <img src="professional-scrum-product-owner-i-pspo-i.png" alt="Professional Scrum Product Owner I">
+            <img src="professional-scrum-product-owner-ii-pspo-ii.png" alt="Professional Scrum Product Owner II">
+        </div>
     </section>
 
-    <!-- Seção de contato -->
     <section class="contact">
         <h2>Entre em Contato</h2>
-        <!-- Links de contato para LinkedIn e e-mail -->
         <p>
-            <!-- Link para o perfil do LinkedIn -->
             <a href="https://www.linkedin.com/in/rodrigo-sena-de-oliveira/" target="_blank">LinkedIn</a>
-            <!-- Link para enviar um e-mail -->
             <a href="mailto:seuemail@exemplo.com">Me Envie um E-mail</a>
         </p>
     </section>
     
-    <!-- Rodapé da página -->
     <footer>
-        <!-- Texto de copyright no rodapé -->
         <p>Rodrigo Sena de Oliveira &copy; 2024 - Todos os direitos reservados</p>
     </footer>
 </body>
