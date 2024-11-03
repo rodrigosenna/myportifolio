@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.3-alpha.1/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.3-alpha.1/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.3-alpha.1/dist/index.js"></script><script>(()=>{setTimeout(()=>{const{markmap:q,mm:v}=window,j=new q.Toolbar;j.attach(v);const we=j.render();we.setAttribute("style","position:absolute;bottom:20px;right:20px"),document.body.append(we)})})()</script><script>((f,d,h,u)=>{const g=f();window.mm=g.Markmap.create("svg#mindmap",(d||g.deriveOptions)(u),h)})(()=>window.markmap,null,{"content":"Fluxo de Versionamento Completo - Git, GitHub, Azure Repos e BitBucket","children":[{"content":"1. Configuração Inicial","children":[{"content":"Diretório Local: C:_Work\\Git\\","children":[],"payload":{"lines":"3,4"}},{"content":"Clone dos Repositórios","children":[{"content":"GitHub: https://github.com/rodrigosenna/lab_github","children":[],"payload":{"lines":"5,6"}},{"content":"Bitbucket: https://bitbucket.org/poc_teste/lab_bitbucket/src/lab_bitbucket/","children":[],"payload":{"lines":"6,7"}},{"content":"Azure Repos: https://dev.azure.com/rodrigosonic/poc/_git/lab_azure","children":[],"payload":{"lines":"7,9"}}],"payload":{"lines":"4,9"}}],"payload":{"lines":"2,3"}},{"content":"2. Branch de Trabalho: Feature1","children":[{"content":"Criar Branch Feature1 a partir de Main","children":[{"content":"Comando: git checkout -b Feature1","children":[],"payload":{"lines":"11,13"}}],"payload":{"lines":"10,13"}}],"payload":{"lines":"9,10"}},{"content":"3. Alteração do Arquivo index.html","children":[{"content":"Editar Arquivo index.html","children":[{"content":"Adicionar Informações:","children":[{"content":"Branch: Feature1","children":[],"payload":{"lines":"16,17"}},{"content":"Última Alteração: [Data e hora]","children":[],"payload":{"lines":"17,19"}}],"payload":{"lines":"15,19"}}],"payload":{"lines":"14,19"}}],"payload":{"lines":"13,14"}},{"content":"4. Verificar e Atualizar Alterações","children":[{"content":"Verificar Alterações no Remoto","children":[{"content":"Comando: git fetch origin","children":[],"payload":{"lines":"21,22"}}],"payload":{"lines":"20,22"}},{"content":"Atualizar Branch Local","children":[{"content":"Comando: git pull origin Feature1","children":[],"payload":{"lines":"23,25"}}],"payload":{"lines":"22,25"}}],"payload":{"lines":"19,20"}},{"content":"5. Commit e Push","children":[{"content":"Commit Alterações Locais","children":[{"content":"Comando: git add index.html","children":[],"payload":{"lines":"27,28"}},{"content":"Comando: git commit -m \"Atualização do arquivo index.html na branch Feature1\"","children":[],"payload":{"lines":"28,29"}}],"payload":{"lines":"26,29"}},{"content":"Push para Repositório Remoto","children":[{"content":"Comando: git push origin Feature1","children":[],"payload":{"lines":"30,32"}}],"payload":{"lines":"29,32"}}],"payload":{"lines":"25,26"}},{"content":"6. Pull Request para develop","children":[{"content":"PR de Feature1 para develop","children":[{"content":"Ação no portal: Criar PR de Feature1 para develop","children":[],"payload":{"lines":"34,35"}}],"payload":{"lines":"33,35"}},{"content":"Revisão e Aprovação","children":[{"content":"Merge após aprovação","children":[],"payload":{"lines":"36,38"}}],"payload":{"lines":"35,38"}}],"payload":{"lines":"32,33"}},{"content":"7. Pull Request para main","children":[{"content":"PR de develop para main","children":[{"content":"Ação no portal: Criar PR de develop para main","children":[],"payload":{"lines":"40,41"}}],"payload":{"lines":"39,41"}},{"content":"Revisão e Aprovação","children":[{"content":"Merge após aprovação","children":[],"payload":{"lines":"42,43"}}],"payload":{"lines":"41,43"}}],"payload":{"lines":"38,39"}}],"payload":{"lines":"0,1"}},null)</script>
+</body>
+</html>
